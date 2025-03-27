@@ -794,17 +794,19 @@ document.experiment_definition(
         introduction_pages:['First off all, thank you for participating in this experiment. It will take you approximately 35min.\n' +
         'The experiment investigates the readability of SQL Joins.\n' +
 
-        'You will see SQL queries with two different variants of join conditions, JOIN ON and JOIN USING.\n ' +
+        'You will see SQL queries with two different variants of join conditions, JOIN ON and JOIN USING.\n' +
         'Each query joins three of the four shown tables on the right through their attribute names. \n' +
-        'Your task is to identify the condition which has an error in it.\n' +
-        'Please check out the sheet in the git repository before you continue.\n\n',
+        'Your task is to identify the condition which has an error in it as fast as possible.\n' +
+        'Please check out the how_to_solve_the_tasks.pdf in the repository before you continue!\n\n',
 
         'Before we start, first adjust the font in the first training exercise, so that you can see all lines of code while maintaining easily readable font.\n'+
         'Depending on your browser and your machine, this could be done by pressing [CTRL] + [+] ' +
         'or [CTRL] + [-]. Also, you can use [F11] to go full screen',
 
         ],
-        pre_run_instruction:'Please put your fingers on 1,2,3.\n\nWhen you press [Enter] the first task will be shown.',
+        pre_run_instruction:'Please put your fingers on 1,2,3.\n' +
+        'Note: After you typed a response, you can take a break if you need to. The timer starts after pressing [ENTER].\n' +
+        'When you press [Enter] the first task will be shown.',
         finish_pages:['Thanks for participating. When you press [Enter], the experiments data will be downloaded.\n\n' +
         'If you want to contribute to research, you can send the downloaded file to maximilian.heinemann@stud.uni-due.de.'],
         layout:[
