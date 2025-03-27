@@ -800,7 +800,7 @@ document.experiment_definition(
         'Before we start, first adjust the font in the first training exercise, so that you can see all lines of code while maintaining easily readable font.\n'+
         'Depending on your browser and your machine, this could be done by pressing [CTRL] + [+] ' +
         'or [CTRL] + [-].\n' + 
-        'Also, you can use [F11] to go full screen. \n' + 
+        'Also, you can use [F11] to go full screen. \n\n' + 
         'Press [ENTER] to go to the next page',
 
         ],
