@@ -112,7 +112,7 @@ class stringBuilderClass {
         }
         var order = [];
         order = helper.generate_order(4);
-        //stmt += pos_error + ' und ' + order  +'\n';
+        stmt += pos_error + ' und ' + order  +'\n';
         //stmt += 'order1: ' + order_in_condition_1 + ' und order2: ' + order_in_condition_2 + '\n';
         var indended = 'yes';
         var order_sub = document.new_random_integer(2);
@@ -375,7 +375,7 @@ class stringBuilderClass {
 
         }
         if(order_in_condition_1 === 'reversed'){
-            stmt += 'ON('
+            stmt += 'USING('
             stmt += table_name_1 + '.' + att_name_sub + ' = ' + table_name_sub + '.' + att_name_sub;
             stmt += ' AND ';
             stmt += table_name_1 + '.' + att_name_1 + ' = ' + table_name_sub + '.' + att_name_1;
@@ -759,13 +759,13 @@ document.experiment_definition(
     {
         experiment_name:'Main Experiment',
         seed:'42',
-        introduction_pages:['First off all, thank you for participating in this experiment. It will take you approximately 45min.\n' +
+        introduction_pages:['First off all, thank you for participating in this experiment. It will take you approximately 35min.\n' +
         'The experiment investigates the readability of SQL Joins.\n' +
 
-        'You will see SQL queries with two different variants of join conditions, JOIN ON and JOIN USING.\n' +
+        'You will see SQL queries with two different variants of join conditions, JOIN ON and JOIN USING.\n ' +
         'Each query joins three of the four shown tables on the right through their attribute names. \n' +
         'Your task is to identify the condition which has an error in it.\n' +
-        'Please check out the how_to_solve_the_task.pdf in the git repository before you continue.\n\n',
+        'Please check out the sheet in the git repository before you continue.\n\n',
 
         'Before we start, first adjust the font in the first training exercise, so that you can see all lines of code while maintaining easily readable font.\n'+
         'Depending on your browser and your machine, this could be done by pressing [CTRL] + [+] ' +
@@ -778,7 +778,7 @@ document.experiment_definition(
         layout:[
             //Welche Variablen braucht mein Versuchs
             {variable:'Join_Type',treatments:['join_on_even', 'join_using']}, //, 'join_on_even', 'join_using'
-            {variable:'pos_error',treatments:['1', '2', '3', '4', '5']},//'1', '2', '3', '4', '5'
+            {variable:'pos_error',treatments:['5']},//'1', '2', '3', '4', '5'
         ],
         repetitions:10,                    // Anzahl der Wiederholungen pro Treatmentcombination
         accepted_responses:['1', '2', '3'], // Tasten, die vom Experiment als Eingabe akzeptiert werden
