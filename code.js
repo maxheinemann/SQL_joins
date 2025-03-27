@@ -72,8 +72,8 @@ class Helper {
 class stringBuilderClass {
     create_stmt (join_type, pos_error){
         var stmt = '';
-        var order_dec_1 = 0;//document.new_random_integer(2);
-        var order_dec_2 = 0;//document.new_random_integer(2);
+        var order_dec_1 = document.new_random_integer(2);
+        var order_dec_2 = document.new_random_integer(2);
         var order_in_condition_1;
         var order_in_condition_2;
         var pos_error_alt;
@@ -112,8 +112,8 @@ class stringBuilderClass {
         }
         var order = [];
         order = helper.generate_order(4);
-        stmt += pos_error + ' und ' + order  +'\n';
-        stmt += 'order1: ' + order_in_condition_1 + ' und order2: ' + order_in_condition_2 + '\n';
+        //stmt += pos_error + ' und ' + order  +'\n';
+        //stmt += 'order1: ' + order_in_condition_1 + ' und order2: ' + order_in_condition_2 + '\n';
         var indended = 'yes';
         var order_sub = document.new_random_integer(2);
         if(order_dec_1 === 1 || order_dec_2 === 1){
