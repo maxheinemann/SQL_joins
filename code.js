@@ -759,13 +759,13 @@ document.experiment_definition(
     {
         experiment_name:'Main Experiment',
         seed:'42',
-        introduction_pages:['First off all, thank you for participating in this experiment. It will take you approximately 35min.\n' +
+        introduction_pages:['First off all, thank you for participating in this experiment. It will take you approximately 45min.\n' +
         'The experiment investigates the readability of SQL Joins.\n' +
 
-        'You will see SQL queries with two different variants of join conditions, JOIN ON and JOIN USING.\n ' +
+        'You will see SQL queries with two different variants of join conditions, JOIN ON and JOIN USING.\n' +
         'Each query joins three of the four shown tables on the right through their attribute names. \n' +
         'Your task is to identify the condition which has an error in it.\n' +
-        'Please check out the sheet in the git repository before you continue.\n\n',
+        'Please check out the how_to_solve_the_task.pdf in the git repository before you continue.\n\n',
 
         'Before we start, first adjust the font in the first training exercise, so that you can see all lines of code while maintaining easily readable font.\n'+
         'Depending on your browser and your machine, this could be done by pressing [CTRL] + [+] ' +
