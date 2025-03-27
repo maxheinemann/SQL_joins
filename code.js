@@ -778,7 +778,7 @@ document.experiment_definition(
         layout:[
             //Welche Variablen braucht mein Versuchs
             {variable:'Join_Type',treatments:['join_on_even', 'join_using']}, //, 'join_on_even', 'join_using'
-            {variable:'pos_error',treatments:['5']},//'1', '2', '3', '4', '5'
+            {variable:'pos_error',treatments:['1', '2', '3', '4', '5']},//'1', '2', '3', '4', '5'
         ],
         repetitions:10,                    // Anzahl der Wiederholungen pro Treatmentcombination
         accepted_responses:['1', '2', '3'], // Tasten, die vom Experiment als Eingabe akzeptiert werden
