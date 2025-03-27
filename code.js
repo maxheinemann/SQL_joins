@@ -112,7 +112,7 @@ class stringBuilderClass {
         }
         var order = [];
         order = helper.generate_order(4);
-        stmt += pos_error + ' und ' + order  +'\n';
+        //stmt += pos_error + ' und ' + order  +'\n';
         //stmt += 'order1: ' + order_in_condition_1 + ' und order2: ' + order_in_condition_2 + '\n';
         var indended = 'yes';
         var order_sub = document.new_random_integer(2);
