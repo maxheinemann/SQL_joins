@@ -72,8 +72,8 @@ class Helper {
 class stringBuilderClass {
     create_stmt (join_type, pos_error){
         var stmt = '';
-        var order_dec_1 = document.new_random_integer(2);
-        var order_dec_2 = document.new_random_integer(2);
+        var order_dec_1 = 0;//document.new_random_integer(2);
+        var order_dec_2 = 0;//document.new_random_integer(2);
         var order_in_condition_1;
         var order_in_condition_2;
         var pos_error_alt;
@@ -113,7 +113,7 @@ class stringBuilderClass {
         var order = [];
         order = helper.generate_order(4);
         stmt += pos_error + ' und ' + order  +'\n';
-        //stmt += 'order1: ' + order_in_condition_1 + ' und order2: ' + order_in_condition_2 + '\n';
+        stmt += 'order1: ' + order_in_condition_1 + ' und order2: ' + order_in_condition_2 + '\n';
         var indended = 'yes';
         var order_sub = document.new_random_integer(2);
         if(order_dec_1 === 1 || order_dec_2 === 1){
@@ -198,30 +198,30 @@ class stringBuilderClass {
                     switch (i){
                         case 0:
                             switch (order[i]){
-                                case 0: tab1 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab1 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab1 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab1 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab1 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab1 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                         case 1:
                             switch (order[i]){
-                                case 0: tab2 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab2 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab2 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab2 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab2 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab2 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                         case 2:
                             switch (order[i]){
-                                case 0: tab3 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab3 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab3 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab3 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab3 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab3 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                         case 3:
                             switch (order[i]){
-                                case 0: tab4 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab4 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab4 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab4 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab4 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab4 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                     }
@@ -353,7 +353,7 @@ class stringBuilderClass {
             stmt += helper.generate_select(att_name_1, att_name_additionally_1, att_name_sub, select_dec_pos);
         }
         if(pos_error === '2'){
-            stmt += helper.generate_select(att_name_sub, att_name_additionally_1, att_name_1, select_dec_pos);
+            stmt += helper.generate_select(att_name_sub, att_name_additionally_sub, att_name_1, select_dec_pos);
         }
         if (pos_error !== '1' && pos_error !== '2'){
             stmt += helper.generate_select(att_name_1, att_name_additionally_sub, att_name_sub, select_dec_pos);
@@ -394,18 +394,35 @@ class stringBuilderClass {
         stmt += 'ON(';
         if (pos_error !== '3' && pos_error !== '4') {
 
-            if (order_in_condition_2 === 'inorder') {
-                stmt += 'q1.' + att_name_1 + ' = ' + table_name_2 + '.' + att_name_1;
-                stmt += ' AND ';
-                stmt += 'q1.' + att_name_additionally_sub + ' = ' + table_name_2 + '.' + att_name_additionally_sub;
-                stmt += ')  ';
+            if(pos_error === '1'){
+                if (order_in_condition_2 === 'inorder') {
+                    stmt += 'q1.' + att_name_1 + ' = ' + table_name_2 + '.' + att_name_1;
+                    stmt += ' AND ';
+                    stmt += 'q1.' + att_name_additionally_1 + ' = ' + table_name_2 + '.' + att_name_additionally_1;
+                    stmt += ')  ';
+                }
+                if (order_in_condition_2 === 'reversed') {
+                    stmt += 'q1.' + att_name_additionally_1 + ' = ' + table_name_2 + '.' + att_name_additionally_1;
+                    stmt += ' AND ';
+                    stmt += 'q1.' + att_name_1 + ' = ' + table_name_2 + '.' + att_name_1;
+                    stmt += ')  ';
+                }
+            }else{
+                if (order_in_condition_2 === 'inorder') {
+                    stmt += 'q1.' + att_name_1 + ' = ' + table_name_2 + '.' + att_name_1;
+                    stmt += ' AND ';
+                    stmt += 'q1.' + att_name_additionally_sub + ' = ' + table_name_2 + '.' + att_name_additionally_sub;
+                    stmt += ')  ';
+                }
+                if (order_in_condition_2 === 'reversed') {
+                    stmt += 'q1.' + att_name_additionally_sub + ' = ' + table_name_2 + '.' + att_name_additionally_sub;
+                    stmt += ' AND ';
+                    stmt += 'q1.' + att_name_1 + ' = ' + table_name_2 + '.' + att_name_1;
+                    stmt += ')  ';
+                }
             }
-            if (order_in_condition_2 === 'reversed') {
-                stmt += 'q1.' + att_name_additionally_sub + ' = ' + table_name_2 + '.' + att_name_additionally_sub;
-                stmt += ' AND ';
-                stmt += 'q1.' + att_name_1 + ' = ' + table_name_2 + '.' + att_name_1;
-                stmt += ')  ';
-            }
+
+
         }
         if(pos_error === '3' || pos_error === '4'){
             var projection_dec = document.new_random_integer(2);
@@ -506,30 +523,30 @@ class stringBuilderClass {
                     switch (i){
                         case 0:
                             switch (order[i]){
-                                case 0: tab1 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab1 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab1 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab1 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab1 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab1 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                         case 1:
                             switch (order[i]){
-                                case 0: tab2 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab2 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab2 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab2 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab2 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab2 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                         case 2:
                             switch (order[i]){
-                                case 0: tab3 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab3 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab3 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab3 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab3 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab3 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                         case 3:
                             switch (order[i]){
-                                case 0: tab4 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_wrong, att_name_additionally_1_pos);break;
+                                case 0: tab4 = helper.generate_table(table_name_1, att_name_additionally_1, att_name_1, att_name_sub, att_name_additionally_1_pos);break;
                                 case 1: tab4 = helper.generate_table(table_name_sub, att_name_additionally_sub, att_name_1, att_name_wrong, att_name_additionally_sub_pos);break;
-                                case 2: tab4 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_1, att_name_1, att_name_additionally_2_pos);break;
+                                case 2: tab4 = helper.generate_table(table_name_2, att_name_additionally_2, att_name_additionally_sub, att_name_1, att_name_additionally_2_pos);break;
                                 case 3: tab4 = helper.generate_table(table_name_four,att_name_sub,att_name_additionally_2,att_name_1,att_name_additionally_four_pos);break;
                             }break;
                     }
@@ -661,7 +678,7 @@ class stringBuilderClass {
             stmt += helper.generate_select(att_name_1, att_name_additionally_1, att_name_sub, select_dec_pos);
         }
         if(pos_error === '2'){
-            stmt += helper.generate_select(att_name_sub, att_name_additionally_1, att_name_1, select_dec_pos);
+            stmt += helper.generate_select(att_name_sub, att_name_additionally_sub, att_name_1, select_dec_pos);
         }
         if (pos_error !== '1' && pos_error !== '2'){
             stmt += helper.generate_select(att_name_1, att_name_additionally_sub, att_name_sub, select_dec_pos);
@@ -700,17 +717,32 @@ class stringBuilderClass {
 
         if (pos_error !== '3' && pos_error !== '4') {
             stmt += 'USING(';
-            if (order_in_condition_2 === 'inorder') {
-                stmt += att_name_1;
-                stmt += ',';
-                stmt += att_name_additionally_sub;
-                stmt += ')  ';
-            }
-            if (order_in_condition_2 === 'reversed') {
-                stmt += att_name_additionally_sub;
-                stmt += ',';
-                stmt += att_name_1;
-                stmt += ')  ';
+            if(pos_error === '1'){
+                if (order_in_condition_2 === 'inorder') {
+                    stmt += att_name_1;
+                    stmt += ',';
+                    stmt += att_name_additionally_1;
+                    stmt += ')  ';
+                }
+                if (order_in_condition_2 === 'reversed') {
+                    stmt += att_name_additionally_1;
+                    stmt += ',';
+                    stmt += att_name_1;
+                    stmt += ')  ';
+                }
+            }else{
+                if (order_in_condition_2 === 'inorder') {
+                    stmt += att_name_1;
+                    stmt += ',';
+                    stmt += att_name_additionally_sub;
+                    stmt += ')  ';
+                }
+                if (order_in_condition_2 === 'reversed') {
+                    stmt += att_name_additionally_sub;
+                    stmt += ',';
+                    stmt += att_name_1;
+                    stmt += ')  ';
+                }
             }
         }
         if(pos_error === '3' || pos_error === '4'){
@@ -778,7 +810,7 @@ document.experiment_definition(
         layout:[
             //Welche Variablen braucht mein Versuchs
             {variable:'Join_Type',treatments:['join_on_even', 'join_using']}, //, 'join_on_even', 'join_using'
-            {variable:'pos_error',treatments:['5']},//'1', '2', '3', '4', '5'
+            {variable:'pos_error',treatments:['1', '2', '3', '4', '5']},//'1', '2', '3', '4', '5'
         ],
         repetitions:10,                    // Anzahl der Wiederholungen pro Treatmentcombination
         accepted_responses:['1', '2', '3'], // Tasten, die vom Experiment als Eingabe akzeptiert werden
