@@ -1,5 +1,3 @@
-//TODO Ziel: Ich mache die Tabellenreihenfolge random, so muss wirklich auch auf die Tabellenbezeichnung geachtet werden
-
 class Helper {
 
     alphabet = [
@@ -805,7 +803,7 @@ document.experiment_definition(
 
         ],
         pre_run_instruction:'Please put your fingers on 1,2,3.\n' +
-        'Note: After you typed a response, you can take a break if you need to. The timer starts after pressing [ENTER].\n' +
+        'Note: After you typed a response, you can take a break if you need to. The timer always starts after pressing [ENTER].\n' +
         'When you press [Enter] the first task will be shown.',
         finish_pages:['Thanks for participating. When you press [Enter], the experiments data will be downloaded.\n\n' +
         'If you want to contribute to research, you can send the downloaded file to maximilian.heinemann@stud.uni-due.de.'],
