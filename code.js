@@ -373,7 +373,7 @@ class stringBuilderClass {
 
         }
         if(order_in_condition_1 === 'reversed'){
-            stmt += 'USING('
+            stmt += 'ON('
             stmt += table_name_1 + '.' + att_name_sub + ' = ' + table_name_sub + '.' + att_name_sub;
             stmt += ' AND ';
             stmt += table_name_1 + '.' + att_name_1 + ' = ' + table_name_sub + '.' + att_name_1;
